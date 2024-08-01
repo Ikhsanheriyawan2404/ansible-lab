@@ -1,0 +1,10 @@
+all:
+  vars:
+    volume_path: "/home/{{ ansible_env.SUDO_USER or ansible_user_id }}/docker_volume"
+  hosts:
+    "{{ lookup('ansible.builtin.env', 'HOST') }}":
+      ansible_user: ikhsan
+      ansible_port: "{{ lookup('ansible.builtin.env', 'PORT') }}"
+      # Replace with the path to your SSH private key
+      ansible_ssh_private_key_file: /home/ikhsan/.ssh/ikhsan
+      # ansible_ssh_private_key_file: "{{ lookup('ansible.builtin.env', 'USER_SSH_KEY') }}"

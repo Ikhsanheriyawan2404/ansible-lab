@@ -1,0 +1,6 @@
+- import_playbook: playbooks/00-host-setup.yml
+- import_playbook: playbooks/01-ssh-change-port.yml
+- import_playbook: playbooks/02-ssh-create-user.yml
+- import_playbook: playbooks/03-ssh-disable-login.yml
+- import_playbook: playbooks/04-install-docker.yml
+- import_playbook: playbooks/05-install-portainer.yml
